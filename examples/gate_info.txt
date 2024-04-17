@@ -1,0 +1,2 @@
+INVX1
+NOR2X1

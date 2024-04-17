@@ -1,0 +1,5 @@
+idea_parser
+
+Accept input files that has gate names. One gate name per line. Then store it as a vector.
+
+
