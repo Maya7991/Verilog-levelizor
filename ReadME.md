@@ -25,3 +25,14 @@ Arguments are:
 2. Gate filename- This file contains the name of gates in the gate library used to synthesize the design.
 
 
+
+ABC
+cd  abc/
+./abc
+read_genlib   directory of cadence library
+read               directory of your verilog file
+strash
+refactor
+map
+write_verilog  directory
+

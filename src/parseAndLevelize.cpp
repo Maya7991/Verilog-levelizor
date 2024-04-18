@@ -129,63 +129,24 @@ class VerilogParser {
         } else {
             throw ce::CustomError("Unable to open Verilog file: "+filename);
         }
-        printGates(gates);
+        
+        std::cout<<"\nPrimary inputs-> ";
         for(auto const& idx: pi){
             std::cout << idx << ", ";
         }
-        std::cout<<"\n ";
+
+        std::cout<<"\nPrimary outputs-> ";
         for(auto const& idx: po){
             std::cout << idx << ", ";
         }
+        std::cout <<std::endl;
+
     }
 
     /**
      * Perform breadth-first search (BFS) traversal to levelize gates
      */
     void levelizeNetlist(){
-        if(gates.empty()) throw ce::CustomError("No netlist available to perform levelization.");
-
-        std::queue<Gate*> q; // Queue for BFS traversal
-        std::cout<<"\nlevelizing\n";
-        // Initialize gates' levels
-        for (auto& gate : gates) {
-            bool isPrimaryOutput = false;
-            std::cout<<"\ngate output: "<< gate.output;
-            // Check if gate's output is in the primary outputs vector po
-            for (const auto& primaryOutput : po) {
-                std::cout<<", po: "<< primaryOutput;
-                if (gate.output == primaryOutput) {
-                    std::cout<<" => matched\n";
-                    isPrimaryOutput = true;
-                    gate.level = 0;
-                    q.push(&gate);
-                    break;
-                }
-            }
-        }
-        std::cout<<"--------------------\n";
-        printGates(gates);
-        // Perform BFS traversal
-        while (!q.empty()) {
-            Gate* currentGate = q.front();
-            q.pop();
-
-            // Update levels of gates connected to currentGate's inputs
-            for (const auto& input : currentGate->inputs) {
-                for (auto& gate : gates) {
-                    if (gate.output == input && gate.level == -1) {
-                        gate.level = currentGate->level + 1;
-                        q.push(&gate);
-                    }
-                }
-            }
-        }
-        std::cout<<"--------------------";
-        printGates(gates);
-
-    }
-
-    void levelize(){
         if(gates.empty()) throw ce::CustomError("No netlist available to perform levelization.");
         
         std::queue<Gate*> q; // Queue for BFS traversal
@@ -194,7 +155,7 @@ class VerilogParser {
         for (auto& gate : gates) {
             bool isPrimaryInput = false;
             for(auto const& gate_input: gate.inputs){
-                //check if input is a primary input                
+                //check if gate's input is a primary input and initialize it to level 0              
                 for (const auto& primaryInput : pi) {
                     if(gate_input==primaryInput){
                         gate.level=0;
@@ -207,15 +168,13 @@ class VerilogParser {
             }
         }
 
-        
-
-        // Next levels
         printGates(gates);
         // Perform BFS traversal
         while (!q.empty()) {
             Gate* currentGate = q.front();
             q.pop();
 
+            // Update levels of gates connected to currentGate's inputs
             for (auto& gate : gates) {
                 for (auto& input: gate.inputs){
                     if(currentGate->output == input && (gate.level == -1 || gate.level <= currentGate->level)){ // might have to remove 2nd condition
@@ -229,7 +188,7 @@ class VerilogParser {
         std::cout<<"--------------------\n";
         printGates(gates);
         std::cout<<"--------------------\n";
-        printLevelizedGates(gates, max_level);
+        printLevelizedGates(gates, max_level); // writes levelwise gate information to a log.txt
 
     }
 };

@@ -1,26 +1,11 @@
 Level 0
-INVX1 g00(a,new_n6)
-INVX1 g01(b,new_n7)
-INVX1 g03(cin,new_n9)
-NOR2X1 g04(b,a,new_n10)
+INVX1 g0(a,new_n5)
+INVX1 g1(b,new_n6)
+NOR2X1 g3(b,a,new_n8)
 
 Level 1
-NOR2X1 g02(new_n7,new_n6,new_n8)
+NOR2X1 g2(new_n6,new_n5,c)
 
 Level 2
-NOR2X1 g05(new_n10,new_n8,new_n11)
-
-Level 3
-INVX1 g06(new_n11,new_n12)
-NOR2X1 g10(new_n11,cin,new_n16)
-
-Level 4
-NOR2X1 g07(new_n12,new_n9,new_n13)
-
-Level 5
-NOR2X1 g08(new_n13,new_n8,new_n14)
-NOR2X1 g11(new_n16,new_n13,sum)
-
-Level 6
-INVX1 g09(new_n14,carry)
+NOR2X1 g4(new_n8,c,s)
 
