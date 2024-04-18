@@ -43,3 +43,5 @@ bool gate (const std::string& word, std::vector<std::string>& gatelibrary);
 std::string trim(const std::string& str);
 
 void printGates(const std::vector<Gate>& gates);
+
+void printLevelizedGates(const std::vector<Gate>& gates, int max_level);

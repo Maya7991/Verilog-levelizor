@@ -16,7 +16,8 @@ int main(int argc, char const *argv[])
         
         VerilogParser parser(argv[1], argv[2]);
         parser.parseFile(argv[1]);
-        parser.levelizeNetlist();
+        // parser.levelizeNetlist();
+        parser.levelize();
     }catch (ce::CustomError& e) {
 		std::cout << std::endl << "Error=> " << e.what() << std::endl << std::endl;
 	}

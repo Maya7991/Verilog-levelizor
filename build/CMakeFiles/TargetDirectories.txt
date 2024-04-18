@@ -1,5 +1,5 @@
-/home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles/edit_cache.dir
-/home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles/rebuild_cache.dir
-/home/vboxuser/DFKI/MAGIC-project/levelizor/build/src/CMakeFiles/levelizor.dir
-/home/vboxuser/DFKI/MAGIC-project/levelizor/build/src/CMakeFiles/edit_cache.dir
-/home/vboxuser/DFKI/MAGIC-project/levelizor/build/src/CMakeFiles/rebuild_cache.dir
+/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles/edit_cache.dir
+/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles/rebuild_cache.dir
+/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src/CMakeFiles/levelizor.dir
+/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src/CMakeFiles/edit_cache.dir
+/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src/CMakeFiles/rebuild_cache.dir

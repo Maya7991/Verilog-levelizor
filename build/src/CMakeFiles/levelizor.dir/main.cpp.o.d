@@ -1,5 +1,5 @@
 src/CMakeFiles/levelizor.dir/main.cpp.o: \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/main.cpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -146,7 +146,7 @@ src/CMakeFiles/levelizor.dir/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/parseAndLevelize.cpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/parseAndLevelize.cpp \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
@@ -160,6 +160,6 @@ src/CMakeFiles/levelizor.dir/main.cpp.o: \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_queue.h \
  /usr/include/c++/11/bits/uses_allocator.h \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/customError.hpp \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.hpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/customError.hpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h

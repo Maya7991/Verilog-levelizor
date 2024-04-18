@@ -1,5 +1,5 @@
 src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o: \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/parseAndLevelize.cpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/parseAndLevelize.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/istream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
@@ -160,6 +160,6 @@ src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o: \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_queue.h \
  /usr/include/c++/11/bits/uses_allocator.h \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/customError.hpp \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.hpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/customError.hpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser/DFKI/MAGIC-project/levelizor
+CMAKE_SOURCE_DIR = /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser/DFKI/MAGIC-project/levelizor/build
+CMAKE_BINARY_DIR = /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/levelizor.dir/depend.make
@@ -72,44 +72,44 @@ include src/CMakeFiles/levelizor.dir/flags.make
 src/CMakeFiles/levelizor.dir/main.cpp.o: src/CMakeFiles/levelizor.dir/flags.make
 src/CMakeFiles/levelizor.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/levelizor.dir/main.cpp.o: src/CMakeFiles/levelizor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/levelizor.dir/main.cpp.o"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/levelizor.dir/main.cpp.o -MF CMakeFiles/levelizor.dir/main.cpp.o.d -o CMakeFiles/levelizor.dir/main.cpp.o -c /home/vboxuser/DFKI/MAGIC-project/levelizor/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/levelizor.dir/main.cpp.o"
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/levelizor.dir/main.cpp.o -MF CMakeFiles/levelizor.dir/main.cpp.o.d -o CMakeFiles/levelizor.dir/main.cpp.o -c /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/main.cpp
 
 src/CMakeFiles/levelizor.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/levelizor.dir/main.cpp.i"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/DFKI/MAGIC-project/levelizor/src/main.cpp > CMakeFiles/levelizor.dir/main.cpp.i
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/main.cpp > CMakeFiles/levelizor.dir/main.cpp.i
 
 src/CMakeFiles/levelizor.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/levelizor.dir/main.cpp.s"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/DFKI/MAGIC-project/levelizor/src/main.cpp -o CMakeFiles/levelizor.dir/main.cpp.s
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/main.cpp -o CMakeFiles/levelizor.dir/main.cpp.s
 
 src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o: src/CMakeFiles/levelizor.dir/flags.make
 src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o: ../src/parseAndLevelize.cpp
 src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o: src/CMakeFiles/levelizor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o -MF CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o.d -o CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o -c /home/vboxuser/DFKI/MAGIC-project/levelizor/src/parseAndLevelize.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o"
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o -MF CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o.d -o CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o -c /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/parseAndLevelize.cpp
 
 src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/levelizor.dir/parseAndLevelize.cpp.i"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/DFKI/MAGIC-project/levelizor/src/parseAndLevelize.cpp > CMakeFiles/levelizor.dir/parseAndLevelize.cpp.i
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/parseAndLevelize.cpp > CMakeFiles/levelizor.dir/parseAndLevelize.cpp.i
 
 src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/levelizor.dir/parseAndLevelize.cpp.s"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/DFKI/MAGIC-project/levelizor/src/parseAndLevelize.cpp -o CMakeFiles/levelizor.dir/parseAndLevelize.cpp.s
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/parseAndLevelize.cpp -o CMakeFiles/levelizor.dir/parseAndLevelize.cpp.s
 
 src/CMakeFiles/levelizor.dir/utils.cpp.o: src/CMakeFiles/levelizor.dir/flags.make
 src/CMakeFiles/levelizor.dir/utils.cpp.o: ../src/utils.cpp
 src/CMakeFiles/levelizor.dir/utils.cpp.o: src/CMakeFiles/levelizor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/levelizor.dir/utils.cpp.o"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/levelizor.dir/utils.cpp.o -MF CMakeFiles/levelizor.dir/utils.cpp.o.d -o CMakeFiles/levelizor.dir/utils.cpp.o -c /home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/levelizor.dir/utils.cpp.o"
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/levelizor.dir/utils.cpp.o -MF CMakeFiles/levelizor.dir/utils.cpp.o.d -o CMakeFiles/levelizor.dir/utils.cpp.o -c /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.cpp
 
 src/CMakeFiles/levelizor.dir/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/levelizor.dir/utils.cpp.i"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.cpp > CMakeFiles/levelizor.dir/utils.cpp.i
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.cpp > CMakeFiles/levelizor.dir/utils.cpp.i
 
 src/CMakeFiles/levelizor.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/levelizor.dir/utils.cpp.s"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.cpp -o CMakeFiles/levelizor.dir/utils.cpp.s
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.cpp -o CMakeFiles/levelizor.dir/utils.cpp.s
 
 # Object files for target levelizor
 levelizor_OBJECTS = \
@@ -125,18 +125,18 @@ src/levelizor: src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o
 src/levelizor: src/CMakeFiles/levelizor.dir/utils.cpp.o
 src/levelizor: src/CMakeFiles/levelizor.dir/build.make
 src/levelizor: src/CMakeFiles/levelizor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable levelizor"
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/levelizor.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable levelizor"
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/levelizor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/levelizor.dir/build: src/levelizor
 .PHONY : src/CMakeFiles/levelizor.dir/build
 
 src/CMakeFiles/levelizor.dir/clean:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src && $(CMAKE_COMMAND) -P CMakeFiles/levelizor.dir/cmake_clean.cmake
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src && $(CMAKE_COMMAND) -P CMakeFiles/levelizor.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/levelizor.dir/clean
 
 src/CMakeFiles/levelizor.dir/depend:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser/DFKI/MAGIC-project/levelizor /home/vboxuser/DFKI/MAGIC-project/levelizor/src /home/vboxuser/DFKI/MAGIC-project/levelizor/build /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src/CMakeFiles/levelizor.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src/CMakeFiles/levelizor.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/levelizor.dir/depend
 

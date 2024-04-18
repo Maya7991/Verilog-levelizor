@@ -1,5 +1,5 @@
 src/CMakeFiles/levelizor.dir/utils.cpp.o: \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.cpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -174,6 +174,6 @@ src/CMakeFiles/levelizor.dir/utils.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/customError.hpp \
- /home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.hpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/customError.hpp \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser/DFKI/MAGIC-project/levelizor
+CMAKE_SOURCE_DIR = /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser/DFKI/MAGIC-project/levelizor/build
+CMAKE_BINARY_DIR = /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles /home/vboxuser/DFKI/MAGIC-project/levelizor/build/src//CMakeFiles/progress.marks
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/DFKI/MAGIC-project/levelizor/build/CMakeFiles 0
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/src//CMakeFiles/progress.marks
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/levelizor.dir/rule:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/levelizor.dir/rule
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/levelizor.dir/rule
 .PHONY : src/CMakeFiles/levelizor.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ levelizor: src/CMakeFiles/levelizor.dir/rule
 
 # fast build rule for target.
 levelizor/fast:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/build
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/build
 .PHONY : levelizor/fast
 
 main.o: main.cpp.o
@@ -135,7 +135,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/main.cpp.o
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -143,7 +143,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/main.cpp.i
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -151,7 +151,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/main.cpp.s
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 parseAndLevelize.o: parseAndLevelize.cpp.o
@@ -159,7 +159,7 @@ parseAndLevelize.o: parseAndLevelize.cpp.o
 
 # target to build an object file
 parseAndLevelize.cpp.o:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o
 .PHONY : parseAndLevelize.cpp.o
 
 parseAndLevelize.i: parseAndLevelize.cpp.i
@@ -167,7 +167,7 @@ parseAndLevelize.i: parseAndLevelize.cpp.i
 
 # target to preprocess a source file
 parseAndLevelize.cpp.i:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.i
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.i
 .PHONY : parseAndLevelize.cpp.i
 
 parseAndLevelize.s: parseAndLevelize.cpp.s
@@ -175,7 +175,7 @@ parseAndLevelize.s: parseAndLevelize.cpp.s
 
 # target to generate assembly for a file
 parseAndLevelize.cpp.s:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.s
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.s
 .PHONY : parseAndLevelize.cpp.s
 
 utils.o: utils.cpp.o
@@ -183,7 +183,7 @@ utils.o: utils.cpp.o
 
 # target to build an object file
 utils.cpp.o:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/utils.cpp.o
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/utils.cpp.o
 .PHONY : utils.cpp.o
 
 utils.i: utils.cpp.i
@@ -191,7 +191,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/utils.cpp.i
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/utils.cpp.i
 .PHONY : utils.cpp.i
 
 utils.s: utils.cpp.s
@@ -199,7 +199,7 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/utils.cpp.s
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/levelizor.dir/build.make src/CMakeFiles/levelizor.dir/utils.cpp.s
 .PHONY : utils.cpp.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/vboxuser/DFKI/MAGIC-project/levelizor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

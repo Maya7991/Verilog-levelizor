@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vboxuser/DFKI/MAGIC-project/levelizor/src/main.cpp" "src/CMakeFiles/levelizor.dir/main.cpp.o" "gcc" "src/CMakeFiles/levelizor.dir/main.cpp.o.d"
-  "/home/vboxuser/DFKI/MAGIC-project/levelizor/src/parseAndLevelize.cpp" "src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o" "gcc" "src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o.d"
-  "/home/vboxuser/DFKI/MAGIC-project/levelizor/src/utils.cpp" "src/CMakeFiles/levelizor.dir/utils.cpp.o" "gcc" "src/CMakeFiles/levelizor.dir/utils.cpp.o.d"
+  "/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/main.cpp" "src/CMakeFiles/levelizor.dir/main.cpp.o" "gcc" "src/CMakeFiles/levelizor.dir/main.cpp.o.d"
+  "/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/parseAndLevelize.cpp" "src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o" "gcc" "src/CMakeFiles/levelizor.dir/parseAndLevelize.cpp.o.d"
+  "/home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.cpp" "src/CMakeFiles/levelizor.dir/utils.cpp.o" "gcc" "src/CMakeFiles/levelizor.dir/utils.cpp.o.d"
   )
 
 # Targets to which this target links.

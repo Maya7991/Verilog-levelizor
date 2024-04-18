@@ -80,3 +80,20 @@ void printGates(const std::vector<Gate>& gates) {
         std::cout << std::endl;
     }
 }
+
+void printLevelizedGates(const std::vector<Gate>& gates, int max_level){
+    std::ofstream  log("log.txt");
+    for(int i=0; i<=max_level; i++){
+        log<<"Level "<< i << std::endl;
+        for (const auto& gate : gates) {
+            if(i==gate.level){
+                log<< gate.type << " " << gate.name << "(" ;
+                for (const auto& input : gate.inputs) {
+                    log << input << ",";
+                }
+                log<< gate.output << ")" << std::endl;
+            }
+        }
+        log << std::endl;
+    }
+}

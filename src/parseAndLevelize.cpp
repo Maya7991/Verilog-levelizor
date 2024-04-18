@@ -163,6 +163,7 @@ class VerilogParser {
                 }
             }
         }
+        std::cout<<"--------------------\n";
         printGates(gates);
         // Perform BFS traversal
         while (!q.empty()) {
@@ -181,6 +182,54 @@ class VerilogParser {
         }
         std::cout<<"--------------------";
         printGates(gates);
+
+    }
+
+    void levelize(){
+        if(gates.empty()) throw ce::CustomError("No netlist available to perform levelization.");
+        
+        std::queue<Gate*> q; // Queue for BFS traversal
+        int max_level = 0;
+
+        for (auto& gate : gates) {
+            bool isPrimaryInput = false;
+            for(auto const& gate_input: gate.inputs){
+                //check if input is a primary input                
+                for (const auto& primaryInput : pi) {
+                    if(gate_input==primaryInput){
+                        gate.level=0;
+                        q.push(&gate);
+                        isPrimaryInput = true;
+                        break;
+                    }
+                }
+                if(isPrimaryInput) break;
+            }
+        }
+
+        
+
+        // Next levels
+        printGates(gates);
+        // Perform BFS traversal
+        while (!q.empty()) {
+            Gate* currentGate = q.front();
+            q.pop();
+
+            for (auto& gate : gates) {
+                for (auto& input: gate.inputs){
+                    if(currentGate->output == input && (gate.level == -1 || gate.level <= currentGate->level)){ // might have to remove 2nd condition
+                        gate.level= currentGate->level + 1;
+                        q.push(&gate);
+                        max_level = max_level<gate.level ? gate.level: max_level;
+                    }
+                }
+            }
+        }
+        std::cout<<"--------------------\n";
+        printGates(gates);
+        std::cout<<"--------------------\n";
+        printLevelizedGates(gates, max_level);
 
     }
 };
