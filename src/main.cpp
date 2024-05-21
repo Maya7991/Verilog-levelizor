@@ -19,6 +19,8 @@ int main(int argc, char const *argv[])
         Netlist netlist = parser.parseFile();
         parser.levelizeNetlist();
 
+        printParsedInfo(netlist);
+
         for (const auto& gate : netlist.gates) {
             delete gate;
         }

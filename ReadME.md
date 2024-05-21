@@ -1,3 +1,7 @@
+Verilog levelizor parses a given gate level verilog file and levelizes it according to ASAP algorithm. Some example verilog files are given in the examples folder. An additional gate_infor file has to be provided as argument along with verioog file. This 
+gate_info file helps identify the gates that are allowed in verilog file.
+----------------------------------------------------------------------------------------------
+
 To build the program for the first time:
 1. Delete all makefiles in the build folder
 
@@ -17,7 +21,7 @@ $ cd src
 $ ./levelizor <verilog_filename> <gate_filename>
 ```
 
-Example: ```$ ./levelizor ../../../nor_files/test_nor2.v ../../examples/gate_info.txt```
+Example: ```$ ./levelizor ../../../nor_files/ha.v ../../examples/gate_info.txt```
 
 
 Arguments are:

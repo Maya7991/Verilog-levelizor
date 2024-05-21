@@ -134,7 +134,7 @@ class VerilogParser {
             throw ce::CustomError("Unable to open Verilog file: "+netlist.verilogfilename);
         }
         
-        printParsedInfo(netlist);
+        // printParsedInfo(netlist);
 
         return netlist;
 
@@ -144,6 +144,8 @@ class VerilogParser {
      * Perform breadth-first search (BFS) traversal to levelize gates
      */
     void levelizeNetlist(){
+
+        std::cout << "Levelizing \n";
         if(netlist.gates.empty()) throw ce::CustomError("No netlist available to perform levelization.");
         
         std::queue<Gate*> q; // Queue for BFS traversal
