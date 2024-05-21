@@ -176,4 +176,5 @@ src/CMakeFiles/levelizor.dir/utils.cpp.o: \
  /usr/include/c++/11/pstl/execution_defs.h \
  /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/customError.hpp \
  /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/utils.hpp \
- /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h
+ /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
+ /home/vboxuser/DFKI/MAGIC-project/Verilog-levelizor/src/datatypes.hpp

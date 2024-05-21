@@ -12,10 +12,7 @@
 class VerilogParser {
     private:
         std::string verilogfilename, gatefilename;
-        std::vector<std::string> gatelibrary; 
-        // std::vector<Gate> gates;
-        std::vector<std::string> pi;
-        std::vector<std::string> po;
+        std::vector<std::string> gatelibrary;
         Netlist netlist;
         std::string line;
         int line_number= 0;
@@ -34,32 +31,34 @@ class VerilogParser {
             if(token=="input"){
                 std::string inputs;
                 while (std::getline(iss, inputs, ',')) {
-                    pi.push_back(trim(inputs));
+                    netlist.pi.push_back(trim(inputs));
                 }
             }
 
             if(token=="output"){
                 std::string outputs;
                 while (std::getline(iss, outputs, ',')) {
-                    po.push_back(trim(outputs));
+                    netlist.po.push_back(trim(outputs));
                 }
             }
             
             if(gate(token, gatelibrary)){
-                Gate* gate;
+                std::string gateName, gateType;
                 size_t pos;
-                gate->type = token;
+                gateType = token;
                 
                 iss >> token;
                 // Extract gate name
                 pos = token.find_first_of('(');
                 if (std::string::npos == pos){
-                    gate->name=token;
+                   gateName=token;
                     iss >> token;
                 } 
                 else{
-                    gate->name = token.substr(0, pos);
+                    gateName = token.substr(0, pos);
                 }
+
+                Gate* gate = new Gate(gateName, gateType);
 
                 // Extract inputs and outputs
                 std::string::size_type firstParenPos = line.find('(');
@@ -80,12 +79,13 @@ class VerilogParser {
                 gate->output = token;
                 gate->level = -1;
 
+                //create a vector of pointers with po gates. later used for constructing NOR tree
+                for(const auto& idx: netlist.po){
+                    if(gate->output == idx) netlist.po_gates.push_back(gate);
+                }
+
                 netlist.gates.push_back(gate);
-                std::cout << std::endl;
             }
-
-            // if(reserved(keyword)) return;
-
         }
 
 
@@ -112,12 +112,13 @@ class VerilogParser {
     public:
     VerilogParser(const std::string& verilogfn, const std::string& gatefn){
         storeGateInformation(gatefn);
-        verilogfilename = verilogfn;
+        netlist.verilogfilename = verilogfn;
         gatefilename = gatefn;
 
     }
-    void parseFile(const std::string& filename){
-        std::ifstream file(filename);
+    Netlist parseFile(){
+
+        std::ifstream file(netlist.verilogfilename);
         if (file.is_open()) {
             try{
                 while (std::getline(file, line, ';')) {
@@ -130,19 +131,12 @@ class VerilogParser {
             std::cout<<"line_number: " <<line_number << ", Gates: "<< netlist.gates.size() << std::endl<< std::endl;
             file.close();
         } else {
-            throw ce::CustomError("Unable to open Verilog file: "+filename);
+            throw ce::CustomError("Unable to open Verilog file: "+netlist.verilogfilename);
         }
         
-        std::cout<<"\nPrimary inputs-> ";
-        for(auto const& idx: pi){
-            std::cout << idx << ", ";
-        }
+        printParsedInfo(netlist);
 
-        std::cout<<"\nPrimary outputs-> ";
-        for(auto const& idx: po){
-            std::cout << idx << ", ";
-        }
-        std::cout <<std::endl;
+        return netlist;
 
     }
 
@@ -155,7 +149,7 @@ class VerilogParser {
         std::queue<Gate*> q; // Queue for BFS traversal
         int max_level = 0;
 
-        std::unordered_set<std::string> primaryInputs(pi.begin(), pi.end());
+        std::unordered_set<std::string> primaryInputs(netlist.pi.begin(), netlist.pi.end());
 
         for (auto& gate : netlist.gates) {
             for (const auto& gate_input : gate->inputs) {

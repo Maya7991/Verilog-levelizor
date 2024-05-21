@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include"utils.hpp"
+#include"datatypes.hpp"
 #include"parseAndLevelize.cpp"
 
 int main(int argc, char const *argv[])
@@ -15,9 +16,13 @@ int main(int argc, char const *argv[])
     try{
         
         VerilogParser parser(argv[1], argv[2]);
-        parser.parseFile(argv[1]);
+        Netlist netlist = parser.parseFile();
         parser.levelizeNetlist();
-        
+
+        for (const auto& gate : netlist.gates) {
+            delete gate;
+        }
+
     }catch (ce::CustomError& e) {
 		std::cout << std::endl << "Error=> " << e.what() << std::endl << std::endl;
         return 1;

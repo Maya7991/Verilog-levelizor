@@ -66,10 +66,21 @@ bool isSpaceNext(const std::string& input) {
     return false; // "INVX1" not found or no character after it
 }
 
-void printGates(const std::vector<Gate*>& gates) {
-    for (const auto& gate : gates) {
-        std::cout << "Name: " << gate->name << std::endl;
-        std::cout << "Type: " << gate->type << std::endl;
+void printParsedInfo(const Netlist netlist){
+    std::cout<<"Primary inputs-> ";
+    for(auto const& idx: netlist.pi){
+        std::cout << idx << ", ";
+    }
+
+    std::cout<<"\nPrimary outputs-> ";
+    for(auto const& idx: netlist.po){
+        std::cout << idx << ", ";
+    }
+    std::cout <<std::endl <<std::endl;
+
+
+    for (const auto& gate : netlist.gates) {
+        std::cout << "Name: " << gate->name << " ,Type: " << gate->type << std::endl;
         std::cout << "Inputs:";
         for (const auto& input : gate->inputs) {
             std::cout << " " << input << ",";
@@ -77,6 +88,22 @@ void printGates(const std::vector<Gate*>& gates) {
         std::cout << std::endl;
         std::cout << "Output: " << gate->output << std::endl;
         std::cout << "Level: " << gate->level << std::endl;
+
+        // std::cout << "Level: " << gate.level << std::endl;
+        std::cout << std::endl;
+    }
+}
+
+void printGates(const std::vector<Gate*>& gates) {
+    for (const auto& gate : gates) {
+        std::cout << "Name: " << gate->name << " ,Type: " << gate->type << std::endl;
+        std::cout << "Inputs:";
+        for (const auto& input : gate->inputs) {
+            std::cout << " " << input << ",";
+        }
+        std::cout << std::endl;
+        std::cout << "Output: " << gate->output << std::endl;
+        // std::cout << "Level: " << gate.level << std::endl;
         std::cout << std::endl;
     }
 }
