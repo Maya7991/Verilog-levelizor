@@ -66,17 +66,17 @@ bool isSpaceNext(const std::string& input) {
     return false; // "INVX1" not found or no character after it
 }
 
-void printGates(const std::vector<Gate>& gates) {
+void printGates(const std::vector<Gate*>& gates) {
     for (const auto& gate : gates) {
-        std::cout << "Name: " << gate.name << std::endl;
-        std::cout << "Type: " << gate.type << std::endl;
+        std::cout << "Name: " << gate->name << std::endl;
+        std::cout << "Type: " << gate->type << std::endl;
         std::cout << "Inputs:";
-        for (const auto& input : gate.inputs) {
+        for (const auto& input : gate->inputs) {
             std::cout << " " << input << ",";
         }
         std::cout << std::endl;
-        std::cout << "Output: " << gate.output << std::endl;
-        std::cout << "Level: " << gate.level << std::endl;
+        std::cout << "Output: " << gate->output << std::endl;
+        std::cout << "Level: " << gate->level << std::endl;
         std::cout << std::endl;
     }
 }

@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 #include <queue>
+#include <unordered_set>
+#include"datatypes.hpp"
 #include"customError.hpp"
 #include"utils.hpp"
 
@@ -11,9 +13,10 @@ class VerilogParser {
     private:
         std::string verilogfilename, gatefilename;
         std::vector<std::string> gatelibrary; 
-        std::vector<Gate> gates;
+        // std::vector<Gate> gates;
         std::vector<std::string> pi;
         std::vector<std::string> po;
+        Netlist netlist;
         std::string line;
         int line_number= 0;
 
@@ -43,19 +46,19 @@ class VerilogParser {
             }
             
             if(gate(token, gatelibrary)){
-                Gate gate;
+                Gate* gate;
                 size_t pos;
-                gate.type = token;
+                gate->type = token;
                 
                 iss >> token;
                 // Extract gate name
                 pos = token.find_first_of('(');
                 if (std::string::npos == pos){
-                    gate.name=token;
+                    gate->name=token;
                     iss >> token;
                 } 
                 else{
-                    gate.name = token.substr(0, pos);
+                    gate->name = token.substr(0, pos);
                 }
 
                 // Extract inputs and outputs
@@ -71,13 +74,13 @@ class VerilogParser {
                     firstParenPos = token.find('(');
                     lastParenPos = token.find_last_of(')');
                     token = token.substr(firstParenPos + 1, lastParenPos - firstParenPos - 1);
-                    gate.inputs.push_back(token);
+                    gate->inputs.push_back(token);
                 }
-                gate.inputs.pop_back();// remove last toke from input as its the output
-                gate.output = token;
-                gate.level = -1;
+                gate->inputs.pop_back();// remove last toke from input as its the output
+                gate->output = token;
+                gate->level = -1;
 
-                gates.push_back(gate);
+                netlist.gates.push_back(gate);
                 std::cout << std::endl;
             }
 
@@ -124,7 +127,7 @@ class VerilogParser {
             catch(ce::CustomError& e){
                 throw e;
             }
-            std::cout<<"line_number: " <<line_number << ", Gates: "<< gates.size() << std::endl<< std::endl;
+            std::cout<<"line_number: " <<line_number << ", Gates: "<< netlist.gates.size() << std::endl<< std::endl;
             file.close();
         } else {
             throw ce::CustomError("Unable to open Verilog file: "+filename);
@@ -147,48 +150,60 @@ class VerilogParser {
      * Perform breadth-first search (BFS) traversal to levelize gates
      */
     void levelizeNetlist(){
-        if(gates.empty()) throw ce::CustomError("No netlist available to perform levelization.");
+        if(netlist.gates.empty()) throw ce::CustomError("No netlist available to perform levelization.");
         
         std::queue<Gate*> q; // Queue for BFS traversal
         int max_level = 0;
 
-        for (auto& gate : gates) {
-            bool isPrimaryInput = false;
-            for(auto const& gate_input: gate.inputs){
-                //check if gate's input is a primary input and initialize it to level 0              
-                for (const auto& primaryInput : pi) {
-                    if(gate_input==primaryInput){
-                        gate.level=0;
-                        q.push(&gate);
-                        isPrimaryInput = true;
-                        break;
-                    }
+        std::unordered_set<std::string> primaryInputs(pi.begin(), pi.end());
+
+        for (auto& gate : netlist.gates) {
+            for (const auto& gate_input : gate->inputs) {
+                // Check if gate's input is a primary input
+                if (primaryInputs.find(gate_input) != primaryInputs.end()) {
+                    gate->level = 0;
+                    q.push(gate);
+                    break;  // Break after finding the first primary input
                 }
-                if(isPrimaryInput) break;
             }
         }
 
-        printGates(gates);
+        // for (const auto& gate : netlist.gates) {
+        //     bool isPrimaryInput = false;
+        //     for(const auto& gate_input: gate.inputs){
+        //         //check if gate's input is a primary input and initialize it to level 0              
+        //         for (const auto& primaryInput : pi) {
+        //             if(gate_input==primaryInput){
+        //                 gate.level=0;
+        //                 q.push(&gate);
+        //                 isPrimaryInput = true;
+        //                 break;
+        //             }
+        //         }
+        //         if(isPrimaryInput) break;
+        //     }
+        // }
+
         // Perform BFS traversal
         while (!q.empty()) {
             Gate* currentGate = q.front();
             q.pop();
 
             // Update levels of gates connected to currentGate's inputs
-            for (auto& gate : gates) {
-                for (auto& input: gate.inputs){
-                    if(currentGate->output == input && (gate.level == -1 || gate.level <= currentGate->level)){ // might have to remove 2nd condition
-                        gate.level= currentGate->level + 1;
-                        q.push(&gate);
-                        max_level = max_level<gate.level ? gate.level: max_level;
+            for (auto& gate : netlist.gates) {
+                for (auto& input: gate->inputs){
+                    if(currentGate->output == input && (gate->level == -1 || gate->level <= currentGate->level)){ // might have to remove 2nd condition
+                        gate->level= currentGate->level + 1;
+                        q.push(gate);
+                        max_level = max_level<gate->level ? gate->level: max_level;
                     }
                 }
             }
         }
-        std::cout<<"--------------------\n";
-        printGates(gates);
-        std::cout<<"--------------------\n";
-        printLevelizedGates(gates, max_level); // writes levelwise gate information to a log.txt
+        // std::cout<<"--------------------\n";
+        // printGates(netlist.gates);
+        // std::cout<<"--------------------\n";
+        // printLevelizedGates(netlist.gates, max_level); // writes levelwise gate information to a log.txt
 
     }
 };

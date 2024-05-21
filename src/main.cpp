@@ -1,7 +1,7 @@
 
 #include <iostream>
+#include"utils.hpp"
 #include"parseAndLevelize.cpp"
-// #include"parseError.hpp"
 
 int main(int argc, char const *argv[])
 {
@@ -17,8 +17,10 @@ int main(int argc, char const *argv[])
         VerilogParser parser(argv[1], argv[2]);
         parser.parseFile(argv[1]);
         parser.levelizeNetlist();
+        
     }catch (ce::CustomError& e) {
 		std::cout << std::endl << "Error=> " << e.what() << std::endl << std::endl;
+        return 1;
 	}
     
     return 0;

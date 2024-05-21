@@ -1,3 +1,6 @@
+#ifndef UTILS
+#define UTILS
+
 #include <cstring> // For strcmp
 #include <cstdlib> // For NULL definition
 #include <string>
@@ -45,3 +48,5 @@ std::string trim(const std::string& str);
 void printGates(const std::vector<Gate>& gates);
 
 void printLevelizedGates(const std::vector<Gate>& gates, int max_level);
+
+#endif
